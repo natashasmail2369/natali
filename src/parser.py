@@ -47,3 +47,4 @@ class CB(Parser):
 
     def __str__(self):
         return f"{CB.__class__.__name__}({self.Exchange})"
+

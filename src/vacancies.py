@@ -41,3 +41,4 @@ class JobVacancy:
 
     def __lt__(self, other):
         return self.salary['to'] < other.salary['to']
+
