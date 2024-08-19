@@ -21,14 +21,8 @@ class FileWork(ABC):
 
 
 class WorkWithJson(FileWork):
-    def __init__(self, file_name):
-        self.__file_name = self.__validation_name_file(file_name)
-
-    @staticmethod
-    def __validation_name_file(file_name):
-        if file_name == ".json":
-            return "vacancy.json"
-        return file_name
+    def __init__(self, file_name='vacancy.json'):
+        self.__file_name = file_name
 
     def read_file(self):
         with open(f"data/{self.__file_name}", "r", encoding="utf-8") as file:
